@@ -18,5 +18,7 @@ class App :
 		self.Update.chkUpdate()
 		mainWindow.run()
 
+# 程序入口
 App = App()
 App.run()
+

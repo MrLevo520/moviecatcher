@@ -10,13 +10,13 @@ class GUI :
 
 	def __init__ (self, master) :
 		self.master = master
-		self.Tools = Tools.Tools()
+		self.Tools = Tools.Tools()  # 新建一个gui界面
 		self.listRst = ''
 		self.resRst = ''
 		self.getDetail = ''
 
 	def showList (self, searchKey) :
-		rstWindow = Tkinter.Toplevel()
+		rstWindow = Tkinter.Toplevel()  # 在保持root界面不关闭的同时，开启新gui
 		rstWindow.title('资源列表')
 		rstWindow.resizable(width = 'false', height = 'false')
 		if self.Tools.isWin() :
@@ -25,7 +25,11 @@ class GUI :
 		titleFrame = Tkinter.Frame(rstWindow, bd = 0, bg="#444")
 		titleFrame.pack(expand = True, fill = 'both')
 
-		titleLabel = Tkinter.Label(titleFrame, text = '关键词 :「 ' + str(searchKey.encode('utf-8')) + ' 」的搜索结果', fg = '#ddd', bg="#444", font = ("Helvetica", "12"))
+		titleLabel = Tkinter.Label(titleFrame, 
+								text = '关键词 :「 ' + str(searchKey.encode('utf-8')) + ' 」的搜索结果', 
+								fg = '#ddd', 
+								bg="#444", 
+								font = ("Helvetica", "12"))
 		titleLabel.grid(row = 1, column = 1, pady = 10)
 
 		titleFrame.grid_columnconfigure(0, weight=1)
@@ -33,10 +37,18 @@ class GUI :
 
 		self.frame = Tkinter.Frame(rstWindow, bd = 0, bg="#222")
 		self.frame.pack(expand = True, fill = 'both')
-
-		self.window = Tkinter.Listbox(self.frame, height = 14, width = 40, bd = 0, bg="#222", fg = '#ddd', selectbackground = '#116cd6', highlightthickness = 0)
+		# Listbox为列表框控件，它可以包含一个或多个文本项(text item)，可以设置为单选或多选
+		self.window = Tkinter.Listbox(self.frame, 
+									 height = 14,
+									  width = 40, 
+									  bd = 0, 
+									  bg="#222",
+									  fg = '#ddd', 
+									  selectbackground = '#116cd6', 
+									  highlightthickness = 0)
 		self.window.grid(row = 0, column = 0, padx = 10, pady = 10)
-		self.window.bind('<Double-Button-1>', self.__getMovDetails)
+		self.window.bind('<Double-Button-1>', self.__getMovDetails) 
+		# 绑定事件，双击启动函数getMovDetails
 
 		try : 
 			self.window.delete(0, 100)
@@ -69,13 +81,28 @@ class GUI :
 		self.resList = Tkinter.Listbox(self.resFrame, height = 8, width = 50, bd = 0, bg="#222", fg = '#ddd',selectbackground = '#116cd6', highlightthickness = 0)
 		self.resList.grid(row = 0, sticky = '')
 
-		viewBtn = Tkinter.Button(btnZone, text = '查看连接', width = 10, fg = '#222', highlightbackground = '#444', command = self.__taskShow)
+		viewBtn = Tkinter.Button(btnZone, 
+								text = '查看连接',
+								 width = 10, 
+								 fg = '#222', 
+								 highlightbackground = '#444',
+								  command = self.__taskShow)
 		viewBtn.grid(row = 0, column = 0, padx = 5)
 
-		watchBtn = Tkinter.Button(btnZone, text = '在线观看', width = 10, fg = '#222', highlightbackground = '#444', command = self.__taskWatch)
+		watchBtn = Tkinter.Button(btnZone,
+								 text = '在线观看', 
+								 width = 10, 
+								 fg = '#222', 
+								 highlightbackground = '#444', 
+								 command = self.__taskWatch)
 		watchBtn.grid(row = 0, column = 1, padx = 5)
 
-		dlBtn = Tkinter.Button(btnZone, text = '离线下载', width = 10, fg = '#222', highlightbackground = '#444', command = self.__taskDownload)
+		dlBtn = Tkinter.Button(btnZone, 
+								text = '离线下载',
+								width = 10, 
+								fg = '#222', 
+								highlightbackground = '#444', 
+								command = self.__taskDownload)
 		dlBtn.grid(row = 0, column = 2, padx = 5)
 
 	def updateRes (self) :
@@ -105,7 +132,7 @@ class GUI :
 
 			target = self.resRst[idx]
 
-	def __taskWatch (self) :
+	def __taskWatch (self) :  # 在线观看
 		if self.resList.curselection() == () :
 			tkMessageBox.showinfo('提示', '请选择一个文件进行操作！')
 		else :

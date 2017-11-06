@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import re
-
+import random	
 from Lib import Tools
 
 class Searcher :
@@ -10,10 +10,13 @@ class Searcher :
 		self.Tools = Tools.Tools()
 		self.page = 1
 		self.zCookie = ''
+		# 重新申请了备用号
+		username = ['moviecatcher','moviecatcher2']
 		self.zmzUserInfo = {
-			'username': 'moviecatcher',
+			'username': username[0],
 			'password': '666666'
 		}
+		
 
 	def find (self, keyword) :
 		self.result = []

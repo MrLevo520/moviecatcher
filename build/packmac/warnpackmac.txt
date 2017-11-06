@@ -1,0 +1,53 @@
+missing module named 'org.python' - imported by copy, xml.sax
+missing module named _sha512 - imported by hashlib
+missing module named _sha256 - imported by hashlib
+missing module named _md5 - imported by hashlib
+missing module named _sha - imported by hashlib
+missing module named org - imported by pickle
+missing module named _subprocess - imported by subprocess
+missing module named msvcrt - imported by subprocess, getpass
+missing module named riscosenviron - imported by os
+missing module named riscospath - imported by os
+missing module named riscos - imported by os
+missing module named ce - imported by os
+missing module named _emx_link - imported by os
+missing module named os2 - imported by os
+missing module named nt - imported by os, ntpath
+missing module named vms_lib - imported by platform
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions
+missing module named java - imported by platform
+missing module named _xmlplus - imported by xml
+missing module named OverrideFrom23 - imported by Carbon.Res
+missing module named _winreg - imported by mimetypes, urllib, winreg, platform, selenium.webdriver.firefox.firefox_binary
+missing module named winreg.OpenKeyEx - imported by winreg, platform
+missing module named winreg.HKEY_LOCAL_MACHINE - imported by winreg, platform, selenium.webdriver.firefox.firefox_binary
+missing module named winreg.QueryValueEx - imported by winreg, platform
+missing module named winreg.CloseKey - imported by winreg, platform
+missing module named winreg.QueryValue - imported by winreg, selenium.webdriver.firefox.firefox_binary
+missing module named winreg.HKEY_CURRENT_USER - imported by winreg, selenium.webdriver.firefox.firefox_binary
+missing module named winreg.OpenKey - imported by winreg, selenium.webdriver.firefox.firefox_binary
+missing module named win32pipe - imported by platform
+missing module named SOCKS - imported by ftplib
+missing module named _dummy_threading - imported by dummy_threading
+missing module named rourl2path - imported by urllib
+missing module named netbios - imported by uuid
+missing module named win32wnet - imported by uuid
+missing module named 'PySide.QtCore' - imported by PIL.ImageQt
+missing module named 'PyQt4.QtCore' - imported by PIL.ImageQt
+missing module named 'PyQt5.QtCore' - imported by PIL.ImageQt
+missing module named cffi - imported by PIL.Image, PIL.PyAccess, PIL.ImageTk
+missing module named pathlib2 - imported by PIL.Image
+missing module named pathlib - imported by PIL.Image
+missing module named 'dbm.ndbm' - imported by future.moves.dbm.ndbm
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu
+missing module named 'dbm.gnu' - imported by future.moves.dbm.gnu
+missing module named 'dbm.dumb' - imported by future.moves.dbm.dumb
+missing module named _bsddb - imported by bsddb, bsddb.db
+missing module named bsddb3 - imported by bsddb
+missing module named _pybsddb - imported by bsddb, bsddb.db
+missing module named 'test.test_support' - imported by future.moves.test.support
+missing module named 'test.support' - imported by future.moves.test.support
+missing module named test - imported by future.standard_library
+missing module named _datetime - imported by future.backports.datetime
+missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
+missing module named _thread.get_ident - imported by _thread, future.backports.misc

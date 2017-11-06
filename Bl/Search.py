@@ -26,12 +26,20 @@ class Search :
 
 		self.ResWindow.updateList()
 
-	# show douban web
+
+	# show douban web	
 	def showDBResult (self, key) :
 		searchKey = key.get()
-
+		# 特别注意豆瓣url的编码方式，需要使用urllib的quote_plus
 		url_ = 'https://www.douban.com/search?q=' + urllib.quote_plus(searchKey.encode('utf8'))
 		webbrowser.open_new(url_)
+
+	def showZHResult (self, key) :
+		searchKey = '如何评价%s'%(key.get().encode('utf8'))
+		# 特别注意豆瓣url的编码方式，需要使用urllib的quote_plus
+		url_ = 'https://www.zhihu.com/search?type=content&q=' + urllib.quote_plus(searchKey)
+		webbrowser.open_new(url_)
+
 
 	def __searchMov (self, key) :
 		# 开启两重匹配找寻
