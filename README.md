@@ -58,7 +58,7 @@
 1. 程序的入口在，Bl目录下的App.py，所以从那开始读代码吧~(`python App.py`进行测试)
 
 
-1. 关于打包文件过大问题，出现原因是自己装的包太多了，然后使用pyinstaller的时候会把没用的包都关联进去，所以刚开始没脑子的打包导致文件150M。。。解决方案是，使用anaconda的版本控制，新建一个虚拟环境，新的环境中只需要如下包即可，然后切到根目录下，执行 `pyinstaller packmac.spec `即可(win 的执行packwin.spec)
+1. 关于打包文件过大问题，出现原因是自己装的包太多了，然后使用pyinstaller的时候会把没用的包都关联进去，所以刚开始没脑子的打包导致文件150M。。。解决方案是，使用anaconda的版本控制，新建一个虚拟环境[anaconda 管理版本](http://www.jianshu.com/p/d2e15200ee9b), 新的环境中只需要如下包即可，然后切到根目录下，执行 `pyinstaller packmac.spec `即可(win 的执行packwin.spec)
 
 - altgraph==0.14
 - certifi==2016.2.28
